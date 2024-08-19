@@ -34,7 +34,7 @@ const Tours = () => {
       }
       {
         showModal &&
-        <ModalAlert title={"Delete tour"}>
+        <ModalAlert title={modalType==="update"? "Update tour" : "Delete tour"}>
           {modalType === "update" ?
             <CreateTour baseData={tours.find(item => item.id === selectTourId)}/>
             :
